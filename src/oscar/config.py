@@ -34,7 +34,7 @@ class Shop(OscarConfig):
 
         urls = [
             url(r'^$', RedirectView.as_view(url=settings.OSCAR_HOMEPAGE), name='home'),
-            url(r'^catalogue/', self.catalogue_app.urls),
+            url(r'^shop/', self.catalogue_app.urls),
             url(r'^basket/', self.basket_app.urls),
             url(r'^checkout/', self.checkout_app.urls),
             url(r'^accounts/', self.customer_app.urls),
